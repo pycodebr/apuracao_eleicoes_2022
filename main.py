@@ -28,6 +28,7 @@ def imprimir():
     df_eleicao = pd.DataFrame(list(zip(candidato, partido, votos, porcentagem)), columns=[
         'Candidato', 'Partido', 'Nº de Votos', 'Porcentagem'
     ])
+    print(f"Porcentagem das runas apuradas: {json_data['pst']}%.\n")
 
     print(df_eleicao)
     time.sleep(5)
