@@ -31,7 +31,7 @@ def imprimir():
     print(f"Porcentagem das runas apuradas: {json_data['pst']}%.\n")
 
     print(df_eleicao)
-    time.sleep(5)
+    time.sleep(10)
     os.system('cls')
     imprimir()
 
