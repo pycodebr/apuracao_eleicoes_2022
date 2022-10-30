@@ -4,7 +4,7 @@ import pandas as pd
 
 data = requests.get(
     'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/br/br-c0001-e000545-r.json')
-    
+
 json_data = json.loads(data.content)
 
 candidato = []
@@ -24,3 +24,9 @@ df_eleicao = pd.DataFrame(list(zip(candidato, votos, porcentagem)), columns = [
 ])
 
 print(df_eleicao)
+b = porcentagem[0]
+l = porcentagem[1]
+b = float(b.replace('.','').replace(',','.'))
+l = float(l.replace('.','').replace(',','.'))
+print("diferença de porcentagem ", "{:.2f}".format(b-l))
+print("diferença de votos ", int(votos[0]) - int(votos[1]))
